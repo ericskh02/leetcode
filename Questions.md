@@ -19,7 +19,7 @@
 ### 92\. Reverse Linked List II
 ### 234\. Palindrome Linked List
 
-## Fast Slow Pointer
+## Fast and Slow Pointers
 ### 142\. Linked List Cycle II
 ### 876\. Middle of the Linked List
 
@@ -27,3 +27,8 @@
 ### 19\. Remove Nth Node From End of List
 ### 160\. Intersection of Two Linked Lists
 
+# Two pointers
+
+## Fast and Slow Pointers
+### 202\. Happy Number
+### 287\. Find the Duplicate Number (Very interesting, should know the result)
