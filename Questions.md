@@ -32,3 +32,24 @@
 ## Fast and Slow Pointers
 ### 202\. Happy Number
 ### 287\. Find the Duplicate Number (Very interesting, should know the result)
+
+# Binary Tree
+
+## Practice Traversal (Both recursion + iteration)
+### 700. Search in a Binary Search Tree.cpp
+### 144. Binary Tree Preorder Traversal
+### 94. Binary Tree Inorder Traversal
+### 104. Maximum Depth of Binary Tree
+
+
+## DFS
+### 543. Diameter of Binary Tree
+
+## BFS
+### 662. Maximum Width of Binary Tree
+
+## Complete Binary Tree
+### 958. Check Completeness of a Binary Tree
+
+## Edit
+### 226. Invert Binary Tree.cpp
