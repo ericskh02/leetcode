@@ -44,12 +44,18 @@
 
 ## DFS
 ### 543. Diameter of Binary Tree
+### 236. Lowest Common Ancestor of a Binary Tree
 
 ## BFS
 ### 662. Maximum Width of Binary Tree
+### 116. Populating Next Right Pointers in Each Node
 
 ## Complete Binary Tree
 ### 958. Check Completeness of a Binary Tree
+
+## Construct 
+### 105. Construct Binary Tree from Preorder and Inorder Traversal
+### 108. Convert Sorted Array to Binary Search Tree
 
 ## Edit
 ### 226. Invert Binary Tree.cpp
