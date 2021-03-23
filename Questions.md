@@ -50,12 +50,16 @@
 ### 662. Maximum Width of Binary Tree
 ### 116. Populating Next Right Pointers in Each Node
 
-## Complete Binary Tree
-### 958. Check Completeness of a Binary Tree
-
 ## Construct 
 ### 105. Construct Binary Tree from Preorder and Inorder Traversal
 ### 108. Convert Sorted Array to Binary Search Tree
 
 ## Edit
 ### 226. Invert Binary Tree.cpp
+
+## Complete Binary Tree
+### 958. Check Completeness of a Binary Tree
+
+## Binary Search Tree (BST)
+### 701. Insert into a Binary Search Tree
+### 1038. Binary Search Tree to Greater Sum Tree
