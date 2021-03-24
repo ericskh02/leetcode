@@ -41,13 +41,15 @@
 ### 94. Binary Tree Inorder Traversal
 ### 104. Maximum Depth of Binary Tree
 
+## Good Question
+### 662. Maximum Width of Binary Tree
+### 124. Binary Tree Maximum Path Sum
 
 ## DFS
 ### 543. Diameter of Binary Tree
 ### 236. Lowest Common Ancestor of a Binary Tree
 
 ## BFS
-### 662. Maximum Width of Binary Tree
 ### 116. Populating Next Right Pointers in Each Node
 
 ## Construct 
