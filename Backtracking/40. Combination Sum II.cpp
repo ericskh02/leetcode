@@ -1,25 +1,22 @@
 class Solution {
 public:
     vector<vector<int>> ans;
-    void dfs(vector<int>& candidates, int target, int index, vector<int>& combine){
-        if(target==0){
-            if(find(ans.begin(),ans.end(),combine)==ans.end()){
-                ans.emplace_back(combine);
-            }
+    void dfs(vector<int>& candidates, int target, int sum, int i, vector<int>& combine){
+        if(sum==target){
+            ans.emplace_back(combine);
             return;
         }
-        if(index==candidates.size()) return;
-        dfs(candidates, target, index+1, combine);
-        if(target-candidates[index]>=0){
-            combine.push_back(candidates[index]);
-            dfs(candidates, target-candidates[index], index+1, combine);
+        for(int j = i;j<candidates.size() && sum+candidates[j]<=target;j++){
+            if(j>i && candidates[j]==candidates[j-1]) continue;
+            combine.push_back(candidates[j]);
+            dfs(candidates,target,sum+candidates[j],j+1,combine);
             combine.pop_back();
         }
     }
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        vector<int> newV;
         sort(candidates.begin(),candidates.end());
-        dfs(candidates,target,0,newV);
+        vector<int> combine;
+        dfs(candidates,target,0,0,combine);
         return ans;
     }
 };
