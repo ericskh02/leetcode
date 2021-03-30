@@ -12,23 +12,24 @@
 class Solution {
 public:
     vector<vector<int>> ans;
-    void traversal(TreeNode* root, vector<int> route, int sum, int targetSum){
-        route.push_back(root->val);
+    void traversal(TreeNode* root, int& targetSum, int& sum, vector<int>& route){
         sum += root->val;
-        if(root->left==nullptr && root->right==nullptr){
-            if(sum==targetSum) ans.push_back(route);
-        }
+        route.push_back(root->val);
+        if(sum == targetSum && root->left==nullptr && root->right==nullptr) ans.emplace_back(route);
         if(root->left!=nullptr){
-            traversal(root->left,route,sum,targetSum);
+            traversal(root->left,targetSum,sum,route);
         }
         if(root->right!=nullptr){
-            traversal(root->right,route,sum,targetSum);
+            traversal(root->right,targetSum,sum,route);
         }
+        sum -= root->val;
+        route.pop_back();
     }
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
-        vector<int> route;
         if(root==nullptr) return ans;
-        traversal(root,route,0,targetSum);
+        vector<int> route;
+        int sum = 0;
+        traversal(root,targetSum,sum,route);
         return ans;
     }
 };
