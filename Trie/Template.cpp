@@ -1,6 +1,17 @@
 // Template for Trie questions
 // Source: Leetcode Solution
 
+/*
+Usage:
+Trie trie = new Trie();
+trie.insert("apple");
+trie.search("apple");   // return True
+trie.search("app");     // return False
+trie.startsWith("app"); // return True
+trie.insert("app");
+trie.search("app");     // return True
+*/
+
 class Trie {
 private:
     vector<Trie*> children;
