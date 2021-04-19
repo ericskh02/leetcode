@@ -3,7 +3,7 @@
 
 /*
 Usage:
-Trie trie = new Trie();
+Trie trie;
 trie.insert("apple");
 trie.search("apple");   // return True
 trie.search("app");     // return False
