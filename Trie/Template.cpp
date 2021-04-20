@@ -3,7 +3,7 @@
 
 /*
 Usage:
-Trie trie;
+Trie trie = new Trie();
 trie.insert("apple");
 trie.search("apple");   // return True
 trie.search("app");     // return False
@@ -13,7 +13,7 @@ trie.search("app");     // return True
 */
 
 class Trie {
-private:
+public:
     vector<Trie*> children;
     bool isEnd;
 
@@ -28,8 +28,7 @@ private:
         }
         return node;
     }
-
-public:
+    
     Trie() : children(26), isEnd(false) {}
 
     void insert(string word) {
