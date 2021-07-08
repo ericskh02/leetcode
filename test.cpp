@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long
 #define INF 0x3f3f3f3f
 
-const int maxn = 1050;
+const int maxn = 1022;
 ll graph[maxn + 1][maxn + 1];
 vector<int> e[maxn + 1];
 
@@ -55,34 +55,33 @@ int main() {
 	int s;
 	int t;
 
+	int n, m;
 	int k, p;
 	while (cin >> k >> p) {
 
 		if (k == 0 && p == 0) break;
 
-		
+		init(k + p + 2);
 
 		s = 0;
 		t = k + p + 1;
-
-		init(t);
 
 		ll sum = 0;
 		for (int i = 1; i <= k; i++) {
 			int in;
 			cin >> in;
-			addEdge(i+p, t, in);	
 			sum += in;
+			addEdge(p + i, t, in);
 		}
-			
+
 		for (int i = 1; i <= p; i++) {
-			addEdge(s, i, 1);
+			addEdge(s, i, INF);
 			int c;
 			cin >> c;
 			while (c--) {
 				int in;
 				cin >> in;
-				addEdge(i, in+p, 1);
+				addEdge(i, p + in, 1);
 			}
 		}
 
@@ -91,13 +90,14 @@ int main() {
 
 		ll ans = 0;
 	
-		while (bfs(pa,a,t,s,t)) {
+		while (bfs(pa,a,k+p+2,s,t)) {
 			for (int u = t; u != s; u = pa[u]) {
 				graph[pa[u]][u] -= a[t];
 				graph[u][pa[u]] += a[t];
 			}
 			ans += a[t];
 		}
+
 		(sum == ans) ? cout << 1 << endl : cout << 0 << endl;
 	}
 	return 0;
