@@ -60,7 +60,7 @@ int main() {
 
 		if (k == 0 && p == 0) break;
 
-
+		
 
 		s = 0;
 		t = k + p + 1;
@@ -71,10 +71,10 @@ int main() {
 		for (int i = 1; i <= k; i++) {
 			int in;
 			cin >> in;
+			addEdge(i+p, t, in);	
 			sum += in;
-			addEdge(p + i, t, in);
 		}
-
+			
 		for (int i = 1; i <= p; i++) {
 			addEdge(s, i, 1);
 			int c;
@@ -82,24 +82,23 @@ int main() {
 			while (c--) {
 				int in;
 				cin >> in;
-				addEdge(i, p + in, 1);
+				addEdge(i, in+p, 1);
 			}
 		}
 
 		vector<int> pa(k + p + 2);
-		vector<ll> a(k + p + 2, 0);
+		vector<ll> a(k+p+2,0);
 
 		ll ans = 0;
-
-		while (bfs(pa, a, t, s, t)) {
+	
+		while (bfs(pa,a,t,s,t)) {
 			for (int u = t; u != s; u = pa[u]) {
 				graph[pa[u]][u] -= a[t];
 				graph[u][pa[u]] += a[t];
 			}
 			ans += a[t];
 		}
-
-		(sum >= ans) ? cout << 1 << endl : cout << 0 << endl;
+		(sum == ans) ? cout << 1 << endl : cout << 0 << endl;
 	}
 	return 0;
 }
